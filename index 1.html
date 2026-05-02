@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Robson Ferreira — Artilheiro Lendário</title>
+  <meta name="description" content="Site oficial de Robson Ferreira — 680 gols, uma lenda do futebol brasileiro." />
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style 1.css" />
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════════════
+     LOADER
+════════════════════════════════════════════════════════ -->
+<div id="loader">
+  <div class="loader-logo">RF<span style="color:#fff;font-size:1.4rem;letter-spacing:2px"> · 680</span></div>
+  <div class="loader-bar"><div class="loader-progress"></div></div>
+  <p style="font-size:.75rem;letter-spacing:2px;color:#7a9cc4;text-transform:uppercase">Carregando Experiência</p>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════════════════════ -->
+<nav id="navbar">
+  <div class="container nav-inner">
+
+    <a href="#" class="nav-logo" data-page="home">RF <span>10</span></a>
+
+    <ul class="nav-links">
+      <li><a href="#" data-page="home"      class="active">Home</a></li>
+      <li><a href="#" data-page="bio"               >Biografia</a></li>
+      <li><a href="#" data-page="stats"             >Estatísticas</a></li>
+      <li><a href="#" data-page="gallery"           >Galeria</a></li>
+      <li><a href="#" data-page="stats" class="nav-cta">Ver Dashboard</a></li>
+    </ul>
+
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#" data-page="home">Home</a>
+  <a href="#" data-page="bio">Biografia</a>
+  <a href="#" data-page="stats">Estatísticas</a>
+  <a href="#" data-page="gallery">Galeria</a>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     PAGE: HOME
+════════════════════════════════════════════════════════ -->
+<div id="home" class="page active">
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg">
+      <img
+        src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=1800&q=80"
+        alt="Estádio de futebol" loading="lazy"
+      />
+    </div>
+    <div class="hero-grid-overlay"></div>
+
+    <div class="container">
+      <div class="hero-content">
+
+        <div class="hero-badge">⚽ Artilheiro Lendário</div>
+
+        <h1 class="hero-name">
+          Robson<br /><span>Ferreira</span>
+        </h1>
+
+        <p class="hero-tagline">
+          Das várzeas do interior ao topo do futebol nacional —
+          uma trajetória marcada por talento nato, superação e uma precisão
+          técnica que jamais se viu nos campos brasileiros.
+        </p>
+
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat-num">680</span>
+            <span class="hero-stat-label">Gols na Carreira</span>
+          </div>
+          <div class="hero-divider"></div>
+          <div class="hero-stat">
+            <span class="hero-stat-num">21</span>
+            <span class="hero-stat-label">Anos de Carreira</span>
+          </div>
+          <div class="hero-divider"></div>
+          <div class="hero-stat">
+            <span class="hero-stat-num">12</span>
+            <span class="hero-stat-label">Títulos Conquistados</span>
+          </div>
+          <div class="hero-divider"></div>
+          <div class="hero-stat">
+            <span class="hero-stat-num">7×</span>
+            <span class="hero-stat-label">Artilheiro do Ano</span>
+          </div>
+        </div>
+
+        <div class="hero-cta">
+          <button class="btn-primary" data-page="bio">
+            ⚡ Conhecer a História
+          </button>
+          <button class="btn-outline" data-page="stats">
+            📊 Ver Estatísticas
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="hero-scroll">Scroll</div>
+  </section>
+
+  <!-- MINI BIO TEASER -->
+  <section style="padding: 80px 0; background: var(--deep);">
+    <div class="container">
+      <div style="display:grid; grid-template-columns: repeat(3,1fr); gap:20px;">
+
+        <div class="glass reveal" style="padding:32px; border-radius:20px; text-align:center;">
+          <div style="font-size:2.8rem; margin-bottom:12px;">🏟️</div>
+          <h3 style="font-family:'Bebas Neue',sans-serif; font-size:1.6rem; color:var(--electric); margin-bottom:8px;">Das Várzeas</h3>
+          <p style="font-size:.9rem; color:var(--muted); line-height:1.7;">Cresceu dominando os campos de chão batido com uma habilidade que os mais velhos jamais tinham visto.</p>
+        </div>
+
+        <div class="glass reveal" style="padding:32px; border-radius:20px; text-align:center; transition-delay:.15s;">
+          <div style="font-size:2.8rem; margin-bottom:12px;">🥇</div>
+          <h3 style="font-family:'Bebas Neue',sans-serif; font-size:1.6rem; color:var(--electric); margin-bottom:8px;">Artilheiro Nato</h3>
+          <p style="font-size:.9rem; color:var(--muted); line-height:1.7;">680 gols em 21 anos de carreira profissional. Uma marca que poucos alcançaram na história do futebol.</p>
+        </div>
+
+        <div class="glass reveal" style="padding:32px; border-radius:20px; text-align:center; transition-delay:.3s;">
+          <div style="font-size:2.8rem; margin-bottom:12px;">💪</div>
+          <h3 style="font-family:'Bebas Neue',sans-serif; font-size:1.6rem; color:var(--electric); margin-bottom:8px;">Superação</h3>
+          <p style="font-size:.9rem; color:var(--muted); line-height:1.7;">Duas lesões graves. Dois retornos triunfais. A mentalidade de um campeão forjada sob pressão máxima.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE SECTION -->
+  <section style="padding: 80px 0;">
+    <div class="container">
+      <div style="max-width: 800px; margin: 0 auto; text-align:center;" class="reveal">
+        <p style="font-family:'Bebas Neue',sans-serif; font-size:clamp(1.8rem,4vw,3rem); line-height:1.2; color:var(--white); margin-bottom:20px;">
+          "O gol não é o fim. É a prova de que você nunca parou de acreditar."
+        </p>
+        <span style="font-size:.85rem; color:var(--electric); letter-spacing:2px; text-transform:uppercase; font-weight:700;">— Robson Ferreira</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURE STATS STRIP -->
+  <section style="padding:60px 0; background: linear-gradient(90deg, var(--deep), var(--mid), var(--deep));">
+    <div class="container">
+      <div style="display:grid; grid-template-columns: repeat(5,1fr); gap:1px; background:rgba(255,255,255,0.06); border-radius:16px; overflow:hidden;">
+        <div style="background:var(--deep); padding:28px 16px; text-align:center;">
+          <div style="font-family:'Bebas Neue',sans-serif; font-size:2.4rem; color:var(--electric);">680</div>
+          <div style="font-size:.72rem; color:var(--muted); letter-spacing:1.5px; text-transform:uppercase; margin-top:4px;">Gols Totais</div>
+        </div>
+        <div style="background:var(--deep); padding:28px 16px; text-align:center;">
+          <div style="font-family:'Bebas Neue',sans-serif; font-size:2.4rem; color:var(--electric);">91</div>
+          <div style="font-size:.72rem; color:var(--muted); letter-spacing:1.5px; text-transform:uppercase; margin-top:4px;">Melhor Temporada</div>
+        </div>
+        <div style="background:var(--deep); padding:28px 16px; text-align:center;">
+          <div style="font-family:'Bebas Neue',sans-serif; font-size:2.4rem; color:var(--electric);">97%</div>
+          <div style="font-size:.72rem; color:var(--muted); letter-spacing:1.5px; text-transform:uppercase; margin-top:4px;">Finalização</div>
+        </div>
+        <div style="background:var(--deep); padding:28px 16px; text-align:center;">
+          <div style="font-family:'Bebas Neue',sans-serif; font-size:2.4rem; color:var(--electric);">12×</div>
+          <div style="font-size:.72rem; color:var(--muted); letter-spacing:1.5px; text-transform:uppercase; margin-top:4px;">Campeão</div>
+        </div>
+        <div style="background:var(--deep); padding:28px 16px; text-align:center;">
+          <div style="font-family:'Bebas Neue',sans-serif; font-size:2.4rem; color:var(--electric);">7×</div>
+          <div style="font-size:.72rem; color:var(--muted); letter-spacing:1.5px; text-transform:uppercase; margin-top:4px;">Artilheiro do Ano</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /page home -->
+
+<!-- ════════════════════════════════════════════════════════
+     PAGE: BIOGRAFIA
+════════════════════════════════════════════════════════ -->
+<div id="bio" class="page">
+  <section id="bio" style="padding:120px 0 100px;">
+    <div class="container">
+
+      <!-- Header -->
+      <div style="text-align:center; margin-bottom:70px;" class="reveal">
+        <div class="section-tag">A História</div>
+        <h2 class="section-title">Da Várzea ao<br/>Topo do Mundo</h2>
+        <p class="section-subtitle" style="margin:0 auto;">Uma vida dedicada a um só propósito: marcar gols e mudar destinos.</p>
+      </div>
+
+      <!-- Bio Grid -->
+      <div class="bio-grid" style="margin-bottom:80px;">
+        <div class="bio-img-wrap reveal-left">
+          <img
+            src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&q=80"
+            alt="Jogador em campo"
+          />
+          <div class="bio-img-badge">
+            <strong>680</strong>
+            <span>⚽ Gols na Carreira</span>
+          </div>
+        </div>
+
+        <div class="bio-content reveal-right">
+          <div class="section-tag">Origens</div>
+          <h2 class="section-title" style="font-size:clamp(2rem,4vw,3rem);">O Garoto do<br/>Campo de Várzea</h2>
+
+          <p class="bio-text">
+            Nascido numa pequena cidade do interior, <strong>Robson Ferreira</strong> aprendeu
+            a jogar descalço, em campos de chão batido onde a bola mal rolava direito.
+            Mas mesmo assim — ou por causa disso — ele se tornou o jogador mais preciso
+            que aquelas redondezas já viram.
+          </p>
+          <p class="bio-text">
+            Aos 12 anos, marcou <em>47 gols</em> em uma única temporada de várzea.
+            Aos 15, foi convocado para o infantil de um grande clube estadual.
+            Aos 17, já era titular e artilheiro. A trajetória parecia roteiro de filme —
+            mas era completamente real.
+          </p>
+          <p class="bio-text">
+            Duas lesões graves tentaram parar o que não tinha freio. Ele voltou das duas,
+            mais forte, mais preciso, com fome renovada. <strong>Hoje, com 680 gols</strong>
+            em 21 anos de carreira, seu nome é sinônimo de determinação e excelência.
+          </p>
+
+          <div class="bio-milestones">
+            <div class="milestone">
+              <div class="milestone-icon">🌱</div>
+              <div class="milestone-info">
+                <strong>Primeira Bola — 1994</strong>
+                <span>Campo de várzea no interior do Brasil. Onde tudo começou.</span>
+              </div>
+            </div>
+            <div class="milestone">
+              <div class="milestone-icon">🏟️</div>
+              <div class="milestone-info">
+                <strong>Estreia Profissional — 2003</strong>
+                <span>Entrou aos 18 anos e marcou gol no primeiro jogo oficial.</span>
+              </div>
+            </div>
+            <div class="milestone">
+              <div class="milestone-icon">💥</div>
+              <div class="milestone-info">
+                <strong>Retorno Épico — 2009</strong>
+                <span>Após ruptura do ligamento, voltou e foi artilheiro na mesma temporada.</span>
+              </div>
+            </div>
+            <div class="milestone">
+              <div class="milestone-icon">🏆</div>
+              <div class="milestone-info">
+                <strong>Marco dos 500 Gols — 2018</strong>
+                <span>Em jogo histórico, entrou para o seleto grupo dos 500+ em ligas nacionais.</span>
+              </div>
+            </div>
+            <div class="milestone">
+              <div class="milestone-icon">⭐</div>
+              <div class="milestone-info">
+                <strong>680 Gols — O Legado</strong>
+                <span>Uma marca que transcende o futebol. Uma inspiração para gerações.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Timeline Visual -->
+      <div class="reveal" style="margin-top:60px;">
+        <div class="section-tag">Trajetória</div>
+        <h3 class="section-title" style="font-size:2.2rem; margin-bottom:40px;">Linha do Tempo</h3>
+
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap:16px;">
+          <div class="glass" style="padding:24px 20px; border-radius:16px; position:relative; overflow:hidden;">
+            <div style="font-family:'Bebas Neue',sans-serif; font-size:1.8rem; color:var(--electric);">2003</div>
+            <div style="font-weight:700; margin:6px 0 4px; color:var(--white);">Estreia</div>
+            <div style="font-size:.82rem; color:var(--muted);">Primeiro gol profissional.</div>
+          </div>
+          <div class="glass" style="padding:24px 20px; border-radius:16px;">
+            <div style="font-family:'Bebas Neue',sans-serif; font-size:1.8rem; color:var(--electric);">2006</div>
+            <div style="font-weight:700; margin:6px 0 4px; color:var(--white);">1ª Artilharia</div>
+            <div style="font-size:.82rem; color:var(--muted);">Top scorer nacional pela primeira vez.</div>
+          </div>
+          <div class="glass" style="padding:24px 20px; border-radius:16px;">
+            <div style="font-family:'Bebas Neue',sans-serif; font-size:1.8rem; color:var(--electric);">2009</div>
+            <div style="font-weight:700; margin:6px 0 4px; color:var(--white);">Retorno</div>
+            <div style="font-size:.82rem; color:var(--muted);">Voltou de lesão e foi campeão.</div>
+          </div>
+          <div class="glass" style="padding:24px 20px; border-radius:16px;">
+            <div style="font-family:'Bebas Neue',sans-serif; font-size:1.8rem; color:var(--electric);">2015</div>
+            <div style="font-weight:700; margin:6px 0 4px; color:var(--white);">300 Gols</div>
+            <div style="font-size:.82rem; color:var(--muted);">Tricentenário lendário.</div>
+          </div>
+          <div class="glass" style="padding:24px 20px; border-radius:16px;">
+            <div style="font-family:'Bebas Neue',sans-serif; font-size:1.8rem; color:var(--electric);">2018</div>
+            <div style="font-weight:700; margin:6px 0 4px; color:var(--white);">500 Gols</div>
+            <div style="font-size:.82rem; color:var(--muted);">Entrou para a história do futebol.</div>
+          </div>
+          <div class="glass" style="padding:24px 20px; border-radius:16px; border-color:rgba(26,108,255,.5);">
+            <div style="font-family:'Bebas Neue',sans-serif; font-size:1.8rem; color:var(--gold);">2024</div>
+            <div style="font-weight:700; margin:6px 0 4px; color:var(--white);">680 Gols</div>
+            <div style="font-size:.82rem; color:var(--muted);">O legado definitivo.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div><!-- /page bio -->
+
+<!-- ════════════════════════════════════════════════════════
+     PAGE: ESTATÍSTICAS
+════════════════════════════════════════════════════════ -->
+<div id="stats" class="page">
+  <section style="padding:120px 0 100px;">
+    <div class="container">
+
+      <div class="stats-header reveal">
+        <div class="section-tag">Dashboard</div>
+        <h2 class="section-title">Performance &<br/>Dados do Atleta</h2>
+        <p class="section-subtitle">Números que traduzem décadas de excelência dentro dos gramados.</p>
+      </div>
+
+      <!-- KPI Cards -->
+      <div class="kpi-grid">
+        <div class="kpi-card reveal">
+          <div class="kpi-icon">⚽</div>
+          <div class="kpi-num" data-count="680" data-suffix="">0</div>
+          <div class="kpi-label">Gols na Carreira</div>
+        </div>
+        <div class="kpi-card reveal" style="transition-delay:.1s">
+          <div class="kpi-icon">🎯</div>
+          <div class="kpi-num" data-count="0.74" data-suffix="">0</div>
+          <div class="kpi-label">Gols por Jogo</div>
+        </div>
+        <div class="kpi-card reveal" style="transition-delay:.2s">
+          <div class="kpi-icon">🏆</div>
+          <div class="kpi-num" data-count="12" data-suffix="">0</div>
+          <div class="kpi-label">Títulos Oficiais</div>
+        </div>
+        <div class="kpi-card reveal" style="transition-delay:.3s">
+          <div class="kpi-icon">📅</div>
+          <div class="kpi-num" data-count="918" data-suffix="">0</div>
+          <div class="kpi-label">Jogos Disputados</div>
+        </div>
+      </div>
+
+      <!-- Charts -->
+      <div class="charts-grid">
+        <div class="chart-card reveal">
+          <div class="chart-card-title">Gols por Temporada</div>
+          <div class="chart-wrap">
+            <canvas id="goalsChart"></canvas>
+          </div>
+        </div>
+        <div class="chart-card reveal" style="transition-delay:.15s">
+          <div class="chart-card-title">Mapa de Habilidades</div>
+          <div class="chart-wrap">
+            <canvas id="skillsChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skill Bars -->
+      <div class="chart-card reveal" style="margin-top:0;">
+        <div class="chart-card-title" style="margin-bottom:32px;">Métricas de Desempenho</div>
+        <div class="skills-grid">
+          <div class="skill-bar-item">
+            <div class="skill-bar-header">
+              <span class="skill-bar-name">⚽ Finalização</span>
+              <span class="skill-bar-pct">97%</span>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" data-pct="97"></div>
+            </div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-header">
+              <span class="skill-bar-name">💨 Velocidade</span>
+              <span class="skill-bar-pct">88%</span>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" data-pct="88"></div>
+            </div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-header">
+              <span class="skill-bar-name">🎯 Precisão</span>
+              <span class="skill-bar-pct">95%</span>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" data-pct="95"></div>
+            </div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-header">
+              <span class="skill-bar-name">🧠 Visão de Jogo</span>
+              <span class="skill-bar-pct">85%</span>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" data-pct="85"></div>
+            </div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-header">
+              <span class="skill-bar-name">🦶 Drible</span>
+              <span class="skill-bar-pct">90%</span>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" data-pct="90"></div>
+            </div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-header">
+              <span class="skill-bar-name">💪 Força Física</span>
+              <span class="skill-bar-pct">82%</span>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" data-pct="82"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Awards Table -->
+      <div class="chart-card reveal" style="margin-top:24px;">
+        <div class="chart-card-title" style="margin-bottom:28px;">Palmarés & Conquistas</div>
+        <div style="overflow-x:auto;">
+          <table style="width:100%; border-collapse:collapse; font-size:.9rem;">
+            <thead>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.08);">
+                <th style="text-align:left; padding:12px 16px; color:var(--muted); font-weight:600; letter-spacing:1px; text-transform:uppercase; font-size:.75rem;">Conquista</th>
+                <th style="text-align:center; padding:12px 16px; color:var(--muted); font-weight:600; letter-spacing:1px; text-transform:uppercase; font-size:.75rem;">Ano(s)</th>
+                <th style="text-align:center; padding:12px 16px; color:var(--muted); font-weight:600; letter-spacing:1px; text-transform:uppercase; font-size:.75rem;">Vezes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.04); transition:.2s;" onmouseover="this.style.background='rgba(26,108,255,0.06)'" onmouseout="this.style.background=''">
+                <td style="padding:14px 16px; color:var(--white); font-weight:600;">🏆 Campeonato Nacional</td>
+                <td style="padding:14px 16px; text-align:center; color:var(--muted);">2007, 2011, 2014, 2019</td>
+                <td style="padding:14px 16px; text-align:center; color:var(--electric); font-weight:700;">4×</td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.04);" onmouseover="this.style.background='rgba(26,108,255,0.06)'" onmouseout="this.style.background=''">
+                <td style="padding:14px 16px; color:var(--white); font-weight:600;">🥇 Copa do Brasil</td>
+                <td style="padding:14px 16px; text-align:center; color:var(--muted);">2008, 2013, 2020</td>
+                <td style="padding:14px 16px; text-align:center; color:var(--electric); font-weight:700;">3×</td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.04);" onmouseover="this.style.background='rgba(26,108,255,0.06)'" onmouseout="this.style.background=''">
+                <td style="padding:14px 16px; color:var(--white); font-weight:600;">⭐ Artilheiro do Ano</td>
+                <td style="padding:14px 16px; text-align:center; color:var(--muted);">2006, 2009, 2012, 2016, 2019, 2021, 2023</td>
+                <td style="padding:14px 16px; text-align:center; color:var(--electric); font-weight:700;">7×</td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.04);" onmouseover="this.style.background='rgba(26,108,255,0.06)'" onmouseout="this.style.background=''">
+                <td style="padding:14px 16px; color:var(--white); font-weight:600;">🌟 Melhor Jogador do Torneio</td>
+                <td style="padding:14px 16px; text-align:center; color:var(--muted);">2011, 2014, 2019</td>
+                <td style="padding:14px 16px; text-align:center; color:var(--electric); font-weight:700;">3×</td>
+              </tr>
+              <tr onmouseover="this.style.background='rgba(26,108,255,0.06)'" onmouseout="this.style.background=''">
+                <td style="padding:14px 16px; color:var(--white); font-weight:600;">🏅 Bola de Ouro Nacional</td>
+                <td style="padding:14px 16px; text-align:center; color:var(--muted);">2012, 2016, 2021</td>
+                <td style="padding:14px 16px; text-align:center; color:var(--gold); font-weight:700;">3×</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div><!-- /page stats -->
+
+<!-- ════════════════════════════════════════════════════════
+     PAGE: GALERIA
+════════════════════════════════════════════════════════ -->
+<div id="gallery" class="page">
+  <section style="padding:120px 0 100px;">
+    <div class="container">
+
+      <div class="gallery-header reveal">
+        <div class="section-tag">Galeria</div>
+        <h2 class="section-title">Momentos que<br/>Ficaram na Memória</h2>
+        <p class="section-subtitle">Uma seleção dos instantes mais marcantes de uma carreira extraordinária.</p>
+
+        <div class="gallery-filters">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="jogos">Jogos</button>
+          <button class="filter-btn" data-filter="treinos">Treinos</button>
+          <button class="filter-btn" data-filter="titulos">Títulos</button>
+        </div>
+      </div>
+
+      <div class="gallery-grid">
+
+        <div class="gallery-item reveal" data-cat="jogos">
+          <img
+            src="https://images.unsplash.com/photo-1551958219-acbc595d836f?w=800&q=80"
+            alt="Jogo noturno"
+          />
+          <div class="gallery-overlay">
+            <div class="gallery-caption">
+              Final do Campeonato
+              <span>📍 Estádio Nacional · 2019</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal" data-cat="treinos" style="transition-delay:.1s">
+          <img
+            src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80"
+            alt="Treino de finalização"
+          />
+          <div class="gallery-overlay">
+            <div class="gallery-caption">
+              Treino de Precisão
+              <span>⚽ Centro de Treinamento · 2022</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal" data-cat="titulos" style="transition-delay:.15s">
+          <img
+            src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=600&q=80"
+            alt="Comemoração de título"
+          />
+          <div class="gallery-overlay">
+            <div class="gallery-caption">
+              Taça Levantada!
+              <span>🏆 Copa do Brasil · 2020</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal" data-cat="jogos" style="transition-delay:.2s">
+          <img
+            src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=900&q=80"
+            alt="Estádio cheio"
+          />
+          <div class="gallery-overlay">
+            <div class="gallery-caption">
+              Noite de Gala
+              <span>📍 Estádio Lotado · 2021</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal" data-cat="treinos" style="transition-delay:.25s">
+          <img
+            src="https://images.unsplash.com/photo-1587329310686-91414b8e3cb7?w=600&q=80"
+            alt="Chuteiras"
+          />
+          <div class="gallery-overlay">
+            <div class="gallery-caption">
+              Os Instrumentos
+              <span>👟 Equipamentos da Temporada · 2023</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal" data-cat="titulos" style="transition-delay:.3s">
+          <img
+            src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=600&q=80"
+            alt="Bola de futebol"
+          />
+          <div class="gallery-overlay">
+            <div class="gallery-caption">
+              A Bola do Gol 500
+              <span>⭐ Marco Histórico · 2018</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA Section -->
+      <div class="reveal" style="margin-top:60px; text-align:center;">
+        <div class="glass" style="padding:48px 32px; border-radius:24px; max-width:600px; margin:0 auto;">
+          <div style="font-size:2rem; margin-bottom:16px;">🌟</div>
+          <h3 style="font-family:'Bebas Neue',sans-serif; font-size:2rem; margin-bottom:12px;">Uma Carreira Lendária</h3>
+          <p style="color:var(--muted); font-size:.95rem; line-height:1.7; margin-bottom:28px;">
+            680 gols. 21 anos. Uma história que transcende o futebol e inspira gerações.
+          </p>
+          <button class="btn-primary" data-page="stats">📊 Ver Todas as Estatísticas</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div><!-- /page gallery -->
+
+<!-- ════════════════════════════════════════════════════════
+     FOOTER (global)
+════════════════════════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo">RF <span style="color:var(--electric)">10</span></div>
+        <p class="footer-desc">
+          Site oficial de Robson Ferreira — artilheiro lendário com 680 gols e
+          uma carreira dedicada à excelência no futebol brasileiro.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <a href="#" data-page="home">Home</a>
+        <a href="#" data-page="bio">Biografia</a>
+        <a href="#" data-page="stats">Estatísticas</a>
+        <a href="#" data-page="gallery">Galeria</a>
+      </div>
+      <div class="footer-col">
+        <h4>Destaques</h4>
+        <a href="#">680 Gols</a>
+        <a href="#">7× Artilheiro</a>
+        <a href="#">12 Títulos</a>
+        <a href="#">21 Anos de Carreira</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 Robson Ferreira. Todos os direitos reservados.</span>
+      <span style="color:var(--electric); font-weight:600;">⚽ 680 Gols & Contando</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose">✕</button>
+  <img class="lightbox-img" id="lightboxImg" src="" alt="Galeria" />
+</div>
+
+<!-- JS -->
+<script src="script.js"></script>
+
+</body>
+</html>
