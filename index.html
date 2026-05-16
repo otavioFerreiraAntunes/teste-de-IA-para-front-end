@@ -3,330 +3,641 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Robson Ferreira — Artilheiro Lendário</title>
-  <meta name="description" content="Site oficial de Robson Ferreira — 680 gols, uma lenda do futebol brasileiro." />
-
+  <title>Velour — Moda & Cosméticos</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 </head>
 <body>
 
-<!-- LOADER -->
-<div id="loader">
-  <div class="loader-logo">RF<span style="color:#fff;font-size:1.4rem;letter-spacing:2px"> · 680</span></div>
-  <div class="loader-bar"><div class="loader-progress"></div></div>
-  <p style="font-size:.75rem;letter-spacing:2px;color:#7a9cc4;text-transform:uppercase">Carregando Experiência</p>
-</div>
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="#hero" class="navbar__logo">
+        <span class="logo-v">V</span>elour
+      </a>
 
-<!-- NAVBAR -->
-<nav id="navbar">
-  <div class="container nav-inner">
-    <a href="#" class="nav-logo" data-page="home">RF <span>10</span></a>
-    <ul class="nav-links">
-      <li><a href="#" data-page="home" class="active">Home</a></li>
-      <li><a href="#" data-page="bio">Biografia</a></li>
-      <li><a href="#" data-page="stats">Estatísticas</a></li>
-      <li><a href="#" data-page="gallery">Galeria</a></li>
-    </ul>
-    <button class="hamburger" id="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
+      <button class="navbar__hamburger" id="hamburger" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
 
-<!-- Mobile Menu -->
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#" data-page="home">Home</a>
-  <a href="#" data-page="bio">Biografia</a>
-  <a href="#" data-page="stats">Estatísticas</a>
-  <a href="#" data-page="gallery">Galeria</a>
-</div>
+      <nav class="navbar__menu" id="navMenu">
+        <a href="#cosmeticos" class="nav-link" data-cat="cosmeticos">Cosméticos</a>
+        <a href="#masculino" class="nav-link" data-cat="masculino">Masc.</a>
+        <a href="#feminino" class="nav-link" data-cat="feminino">Fem.</a>
+        <a href="#jeans" class="nav-link" data-cat="jeans">Jeans</a>
+        <a href="#bolsas" class="nav-link" data-cat="bolsas">Bolsas</a>
+        <a href="#lingerie" class="nav-link" data-cat="lingerie">Lingerie</a>
+        <a href="#geral" class="nav-link" data-cat="geral">Geral</a>
+      </nav>
 
-<!-- PAGE: HOME -->
-<div id="home" class="page active">
-
-  <!-- HERO -->
-  <section id="hero">
-    <div class="hero-grid-overlay"></div>
-    <div class="container">
-      <div class="hero-content">
-        <div class="hero-badge">⚽ Artilheiro Lendário</div>
-        <h1 class="hero-name">Robson<br /><span>Ferreira</span></h1>
-        <p class="hero-tagline">
-          Das várzeas do interior ao topo do futebol nacional —
-          uma trajetória marcada por talento nato, superação e uma precisão
-          técnica que jamais se viu nos campos brasileiros.
-        </p>
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <span class="hero-stat-num">680</span>
-            <span class="hero-stat-label">Gols na Carreira</span>
-          </div>
-          <div class="hero-divider"></div>
-          <div class="hero-stat">
-            <span class="hero-stat-num">21</span>
-            <span class="hero-stat-label">Anos de Carreira</span>
-          </div>
-          <div class="hero-divider"></div>
-          <div class="hero-stat">
-            <span class="hero-stat-num">12</span>
-            <span class="hero-stat-label">Títulos Conquistados</span>
-          </div>
-          <div class="hero-divider"></div>
-          <div class="hero-stat">
-            <span class="hero-stat-num">7×</span>
-            <span class="hero-stat-label">Artilheiro do Ano</span>
-          </div>
-        </div>
-        <div class="hero-cta">
-          <button class="btn-primary" data-page="bio">⚡ Conhecer a História</button>
-          <button class="btn-outline" data-page="stats">📊 Ver Estatísticas</button>
-        </div>
-      </div>
+      <button class="navbar__cart-btn" id="cartToggle" aria-label="Abrir carrinho">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
     </div>
-    <div class="hero-scroll">Scroll</div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__content">
+      <p class="hero__eyebrow">Nova Coleção — Outono 2025</p>
+      <h1 class="hero__title">
+        O estilo que você<br />
+        <em>sempre sonhou</em><br />
+        ao alcance.
+      </h1>
+      <p class="hero__sub">Moda, beleza e elegância reunidas em um só lugar.</p>
+      <a href="#cosmeticos" class="btn btn--primary">Explorar coleção</a>
+    </div>
+    <div class="hero__deco"></div>
   </section>
 
-  <!-- MINI BIO TEASER -->
-  <!-- ANTES: style="display:grid; grid-template-columns: repeat(3,1fr); gap:20px"
-       AGORA: class="home-cards-grid" — controlado pelo CSS responsivo -->
-  <section style="padding: 80px 0; background: var(--deep);">
-    <div class="container">
-      <div class="home-cards-grid">
+  <!-- ===== COSMÉTICOS ===== -->
+  <section class="section" id="cosmeticos">
+    <div class="section__header">
+      <span class="section__tag">Beleza</span>
+      <h2 class="section__title">Cosméticos</h2>
+      <p class="section__desc">Linhas exclusivas <strong>O Boticário</strong> &amp; <strong>Eudora</strong> — perfumes, cremes e muito mais.</p>
+    </div>
+    <div class="products-grid" id="grid-cosmeticos">
 
-        <div class="glass reveal" style="padding:32px; border-radius:20px; text-align:center;">
-          <div style="font-size:2.8rem; margin-bottom:12px;">🏟️</div>
-          <h3 style="font-family:'Bebas Neue',sans-serif; font-size:1.6rem; color:var(--electric); margin-bottom:8px;">Das Várzeas</h3>
-          <p style="font-size:.9rem; color:var(--muted); line-height:1.7;">Cresceu dominando os campos de chão batido com uma habilidade que os mais velhos jamais tinham visto.</p>
+      <article class="card" data-id="c1" data-name="Perfume Boticário Malbec" data-price="189.90">
+        <div class="card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1541643600914-78b084683702?w=600&q=80" alt="Perfume Malbec" loading="lazy" />
+          <div class="card__badge">O Boticário</div>
         </div>
-
-        <div class="glass reveal" style="padding:32px; border-radius:20px; text-align:center; transition-delay:.15s;">
-          <div style="font-size:2.8rem; margin-bottom:12px;">🥇</div>
-          <h3 style="font-family:'Bebas Neue',sans-serif; font-size:1.6rem; color:var(--electric); margin-bottom:8px;">Artilheiro Nato</h3>
-          <p style="font-size:.9rem; color:var(--muted); line-height:1.7;">680 gols em 21 anos de carreira profissional. Uma marca que poucos alcançaram na história do futebol.</p>
+        <div class="card__body">
+          <h3 class="card__name">Perfume Malbec</h3>
+          <p class="card__brand">O Boticário</p>
+          <p class="card__price">R$ 189,90</p>
+          <button class="btn btn--cart" onclick="addToCart(this)">Adicionar ao carrinho</button>
         </div>
+      </article>
 
-        <div class="glass reveal" style="padding:32px; border-radius:20px; text-align:center; transition-delay:.3s;">
-          <div style="font-size:2.8rem; margin-bottom:12px;">💪</div>
-          <h3 style="font-family:'Bebas Neue',sans-serif; font-size:1.6rem; color:var(--electric); margin-bottom:8px;">Superação</h3>
-          <p style="font-size:.9rem; color:var(--muted); line-height:1.7;">Duas lesões graves. Dois retornos triunfais. A mentalidade de um campeão forjada sob pressão máxima.</p>
+      <article class="card" data-id="c2" data-name="Perfume Eudora Glamour" data-price="129.90">
+        <div class="card__img-wrap">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-1Kh27FTPzaD6CgmHRIKpwYPU5CAYlK_NKQ&s" alt="Perfume Glamour" loading="lazy" />
+          <div class="card__badge">Eudora</div>
         </div>
+        <div class="card__body">
+          <h3 class="card__name">Perfume Glamour</h3>
+          <p class="card__brand">Eudora</p>
+          <p class="card__price">R$ 129,90</p>
+          <button class="btn btn--cart" onclick="addToCart(this)">Adicionar ao carrinho</button>
+        </div>
+      </article>
+      <article class="card" data-id="c2" data-name="Perfume Eudora Glamour" data-price="129.90">
+        <div class="card__img-wrap">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-1Kh27FTPzaD6CgmHRIKpwYPU5CAYlK_NKQ&s" alt="Perfume Glamour" loading="lazy" />
+          <div class="card__badge">Eudora</div>
+        </div>
+        <div class="card__body">
+          <h3 class="card__name">Perfume Glamour</h3>
+          <p class="card__brand">Eudora</p>
+          <p class="card__price">R$ 129,90</p>
+          <button class="btn btn--cart" onclick="addToCart(this)">Adicionar ao carrinho</button>
+        </div>
+      </article>
+      <article class="card" data-id="c2" data-name="Perfume Eudora Glamour" data-price="129.90">
+        <div class="card__img-wrap">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-1Kh27FTPzaD6CgmHRIKpwYPU5CAYlK_NKQ&s" alt="Perfume Glamour" loading="lazy" />
+          <div class="card__badge">Eudora</div>
+        </div>
+        <div class="card__body">
+          <h3 class="card__name">Perfume Glamour</h3>
+          <p class="card__brand">Eudora</p>
+          <p class="card__price">R$ 129,90</p>
+          <button class="btn btn--cart" onclick="addToCart(this)">Adicionar ao carrinho</button>
+        </div>
+      </article>
+      <article class="card" data-id="c2" data-name="Perfume Eudora Glamour" data-price="129.90">
+        <div class="card__img-wrap">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-1Kh27FTPzaD6CgmHRIKpwYPU5CAYlK_NKQ&s" alt="Perfume Glamour" loading="lazy" />
+          <div class="card__badge">Eudora</div>
+        </div>
+        <div class="card__body">
+          <h3 class="card__name">Perfume Glamour</h3>
+          <p class="card__brand">Eudora</p>
+          <p class="card__price">R$ 129,90</p>
+          <button class="btn btn--cart" onclick="addToCart(this)">Adicionar ao carrinho</button>
+        </div>
+      </article>
 
-      </div>
+      <article class="card" data-id="c3" data-name="Creme Hidratante Boticário" data-price="69.90">
+        <div class="card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=600&q=80" alt="Creme Hidratante" loading="lazy" />
+          <div class="card__badge">O Boticário</div>
+        </div>
+        <div class="card__body">
+          <h3 class="card__name">Creme Hidratante Nativa SPA</h3>
+          <p class="card__brand">O Boticário</p>
+          <p class="card__price">R$ 69,90</p>
+          <button class="btn btn--cart" onclick="addToCart(this)">Adicionar ao carrinho</button>
+        </div>
+      </article>
+
+      <article class="card" data-id="c4" data-name="Kit Eudora Sienna" data-price="210.00">
+        <div class="card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1619451334792-150fd785ee74?w=600&q=80" alt="Kit Sienna" loading="lazy" />
+          <div class="card__badge">Eudora</div>
+        </div>
+        <div class="card__body">
+          <h3 class="card__name">Kit Sienna Eudora</h3>
+          <p class="card__brand">Eudora</p>
+          <p class="card__price">R$ 210,00</p>
+          <button class="btn btn--cart" onclick="addToCart(this)">Adicionar ao carrinho</button>
+        </div>
+      </article>
+
+      <article class="card" data-id="c5" data-name="Batom Matte Eudora" data-price="49.90">
+        <div class="card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1586495777744-4e6232bf4854?w=600&q=80" alt="Batom Matte" loading="lazy" />
+          <div class="card__badge">Eudora</div>
+        </div>
+        <div class="card__body">
+          <h3 class="card__name">Batom Matte Eudora</h3>
+          <p class="card__brand">Eudora</p>
+          <p class="card__price">R$ 49,90</p>
+          <button class="btn btn--cart" onclick="addToCart(this)">Adicionar ao carrinho</button>
+        </div>
+      </article>
+
+      <article class="card" data-id="c6" data-name="Sérum Anti-Idade Boticário" data-price="159.90">
+        <div class="card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1629198688000-71f23e745b6e?w=600&q=80" alt="Sérum" loading="lazy" />
+          <div class="card__badge">O Boticário</div>
+        </div>
+        <div class="card__body">
+          <h3 class="card__name">Sérum Anti-Idade Gold</h3>
+          <p class="card__brand">O Boticário</p>
+          <p class="card__price">R$ 159,90</p>
+          <button class="btn btn--cart" onclick="addToCart(this)">Adicionar ao carrinho</button>
+        </div>
+      </article>
+      <article class="card" data-id="c6" data-name="Sérum Anti-Idade Boticário" data-price="159.90">
+        <div class="card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1629198688000-71f23e745b6e?w=600&q=80" alt="Sérum" loading="lazy" />
+          <div class="card__badge">O Boticário</div>
+        </div>
+        <div class="card__body">
+          <h3 class="card__name">Sérum Anti-Idade Gold</h3>
+          <p class="card__brand">O Boticário</p>
+          <p class="card__price">R$ 159,90</p>
+          <button class="btn btn--cart" onclick="addToCart(this)">Adicionar ao carrinho</button>
+        </div>
+      </article>
+      <article class="card" data-id="c6" data-name="Sérum Anti-Idade Boticário" data-price="159.90">
+        <div class="card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1629198688000-71f23e745b6e?w=600&q=80" alt="Sérum" loading="lazy" />
+          <div class="card__badge">O Boticário</div>
+        </div>
+        <div class="card__body">
+          <h3 class="card__name">Sérum Anti-Idade Gold</h3>
+          <p class="card__brand">O Boticário</p>
+          <p class="card__price">R$ 159,90</p>
+          <button class="btn btn--cart" onclick="addToCart(this)">Adicionar ao carrinho</button>
+        </div>
+      </article>
+
     </div>
   </section>
 
-  <!-- QUOTE SECTION -->
-  <section style="padding: 80px 0;">
-    <div class="container">
-      <div style="max-width: 800px; margin: 0 auto; text-align:center;" class="reveal">
-        <p style="font-family:'Bebas Neue',sans-serif; font-size:clamp(1.8rem,4vw,3rem); line-height:1.2; color:var(--white); margin-bottom:20px;">
-          "O gol não é o fim. É a prova de que você nunca parou de acreditar."
-        </p>
-        <span style="font-size:.85rem; color:var(--electric); letter-spacing:2px; text-transform:uppercase; font-weight:700;">— Robson Ferreira</span>
-      </div>
+  <!-- ===== ROUPAS MASCULINAS ===== -->
+  <section class="section section--alt" id="masculino">
+    <div class="section__header">
+      <span class="section__tag">Moda</span>
+      <h2 class="section__title">Roupas Masculinas</h2>
+      <p class="section__desc">Estilo e sofisticação para o homem moderno.</p>
+    </div>
+    <div class="products-grid">
+
+      <article class="card" data-id="m1" data-name="Camisa Social Slim Fit" data-price="159.90">
+        <div class="card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=600&q=80" alt="Camisa Social" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__name">Camisa Social Slim Fit</h3>
+          <p class="card__brand">Masculino</p>
+          <p class="card__price">R$ 159,90</p>
+          <button class="btn btn--cart" onclick="addToCart(this)">Adicionar ao carrinho</button>
+        </div>
+      </article>
+
+      <article class="card" data-id="m2" data-name="Calça Chino Masculina" data-price="219.90">
+        <div class="card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=600&q=80" alt="Calça Chino" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__name">Calça Chino Premium</h3>
+          <p class="card__brand">Masculino</p>
+          <p class="card__price">R$ 219,90</p>
+          <button class="btn btn--cart" onclick="addToCart(this)">Adicionar ao carrinho</button>
+        </div>
+      </article>
+
+      <article class="card" data-id="m3" data-name="Blazer Casual Masculino" data-price="349.90">
+        <div class="card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&q=80" alt="Blazer" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__name">Blazer Casual Estruturado</h3>
+          <p class="card__brand">Masculino</p>
+          <p class="card__price">R$ 349,90</p>
+          <button class="btn btn--cart" onclick="addToCart(this)">Adicionar ao carrinho</button>
+        </div>
+      </article>
+
+      <article class="card" data-id="m4" data-name="Camiseta Polo Masculina" data-price="99.90">
+        <div class="card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600&q=80" alt="Polo" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__name">Camiseta Polo Classic</h3>
+          <p class="card__brand">Masculino</p>
+          <p class="card__price">R$ 99,90</p>
+          <button class="btn btn--cart" onclick="addToCart(this)">Adicionar ao carrinho</button>
+        </div>
+      </article>
+
     </div>
   </section>
 
-  <!-- FEATURE STATS STRIP -->
-  <!-- ANTES: style="display:grid; grid-template-columns: repeat(5,1fr)..."
-       AGORA: class="home-stats-strip" — controlado pelo CSS responsivo -->
-  <section style="padding:60px 0; background: linear-gradient(90deg, var(--deep), var(--mid), var(--deep));">
-    <div class="container">
-      <div class="home-stats-strip">
-        <div style="background:var(--deep); padding:28px 16px; text-align:center;">
-          <div style="font-family:'Bebas Neue',sans-serif; font-size:2.4rem; color:var(--electric);">680</div>
-          <div style="font-size:.72rem; color:var(--muted); letter-spacing:1.5px; text-transform:uppercase; margin-top:4px;">Gols Totais</div>
+  <!-- ===== ROUPAS FEMININAS ===== -->
+  <section class="section" id="feminino">
+    <div class="section__header">
+      <span class="section__tag">Moda</span>
+      <h2 class="section__title">Roupas Femininas</h2>
+      <p class="section__desc">Peças que celebram a elegância e a feminilidade.</p>
+    </div>
+    <div class="products-grid">
+
+      <article class="card" data-id="f1" data-name="Vestido Midi Floral" data-price="279.90">
+        <div class="card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=600&q=80" alt="Vestido Midi" loading="lazy" />
         </div>
-        <div style="background:var(--deep); padding:28px 16px; text-align:center;">
-          <div style="font-family:'Bebas Neue',sans-serif; font-size:2.4rem; color:var(--electric);">91</div>
-          <div style="font-size:.72rem; color:var(--muted); letter-spacing:1.5px; text-transform:uppercase; margin-top:4px;">Melhor Temporada</div>
+        <div class="card__body">
+          <h3 class="card__name">Vestido Midi Floral</h3>
+          <p class="card__brand">Feminino</p>
+          <p class="card__price">R$ 279,90</p>
+          <button class="btn btn--cart" onclick="addToCart(this)">Adicionar ao carrinho</button>
         </div>
-        <div style="background:var(--deep); padding:28px 16px; text-align:center;">
-          <div style="font-family:'Bebas Neue',sans-serif; font-size:2.4rem; color:var(--electric);">97%</div>
-          <div style="font-size:.72rem; color:var(--muted); letter-spacing:1.5px; text-transform:uppercase; margin-top:4px;">Finalização</div>
+      </article>
+
+      <article class="card" data-id="f2" data-name="Blusa Cropped Feminina" data-price="89.90">
+        <div class="card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1594938298603-c8148c4baaeb?w=600&q=80" alt="Blusa Cropped" loading="lazy" />
         </div>
-        <div style="background:var(--deep); padding:28px 16px; text-align:center;">
-          <div style="font-family:'Bebas Neue',sans-serif; font-size:2.4rem; color:var(--electric);">12×</div>
-          <div style="font-size:.72rem; color:var(--muted); letter-spacing:1.5px; text-transform:uppercase; margin-top:4px;">Campeão</div>
+        <div class="card__body">
+          <h3 class="card__name">Blusa Cropped Premium</h3>
+          <p class="card__brand">Feminino</p>
+          <p class="card__price">R$ 89,90</p>
+          <button class="btn btn--cart" onclick="addToCart(this)">Adicionar ao carrinho</button>
         </div>
-      </div>
+      </article>
+
+      <article class="card" data-id="f3" data-name="Saia Midi Plissada" data-price="199.90">
+        <div class="card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?w=600&q=80" alt="Saia Plissada" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__name">Saia Midi Plissada</h3>
+          <p class="card__brand">Feminino</p>
+          <p class="card__price">R$ 199,90</p>
+          <button class="btn btn--cart" onclick="addToCart(this)">Adicionar ao carrinho</button>
+        </div>
+      </article>
+
+      <article class="card" data-id="f4" data-name="Blazer Oversized Feminino" data-price="319.90">
+        <div class="card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1551163943-3f6a855d1153?w=600&q=80" alt="Blazer Feminino" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__name">Blazer Oversized</h3>
+          <p class="card__brand">Feminino</p>
+          <p class="card__price">R$ 319,90</p>
+          <button class="btn btn--cart" onclick="addToCart(this)">Adicionar ao carrinho</button>
+        </div>
+      </article>
+
     </div>
   </section>
 
-</div><!-- /page home -->
+  <!-- ===== JEANS ===== -->
+  <section class="section section--alt" id="jeans">
+    <div class="section__header">
+      <span class="section__tag">Denim</span>
+      <h2 class="section__title">Jeans</h2>
+      <p class="section__desc">O clássico que nunca sai de moda — para ele e para ela.</p>
+    </div>
+    <div class="products-grid">
 
-<!-- PAGE: BIOGRAFIA -->
-<div id="bio" class="page">
-  <section id="bio-section" style="padding:120px 0 100px;">
-    <div class="container">
-      <div style="text-align:center; margin-bottom:70px;" class="reveal">
-        <div class="section-tag">A História</div>
-        <h2 class="section-title">Da Várzea ao<br/>Topo do Mundo</h2>
-        <p class="section-subtitle" style="margin:0 auto;">Uma vida dedicada a um só propósito: marcar gols e mudar destinos.</p>
-      </div>
-      <div class="bio-grid" style="margin-bottom:80px;">
-        <div class="bio-img-wrap reveal-left">
-          <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&q=80" alt="Jogador em campo" />
-          <div class="bio-img-badge">
-            <strong>680</strong>
-            <span>⚽ Gols na Carreira</span>
-          </div>
+      <article class="card" data-id="j1" data-name="Calça Jeans Skinny Feminina" data-price="189.90">
+        <div class="card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=600&q=80" alt="Jeans Skinny" loading="lazy" />
         </div>
-        <div class="bio-content reveal-right">
-          <div class="section-tag">Origens</div>
-          <h2 class="section-title" style="font-size:clamp(2rem,4vw,3rem);">O Garoto do<br/>Campo de Várzea</h2>
-          <p class="bio-text">Nascido numa pequena cidade do interior, <strong>Robson Ferreira</strong> aprendeu a jogar descalço, em campos de chão batido onde a bola mal rolava direito. Mas mesmo assim — ou por causa disso — ele se tornou o jogador mais preciso que aquelas redondezas já viram.</p>
-          <p class="bio-text">Aos 12 anos, marcou <em>47 gols</em> em uma única temporada de várzea. Aos 15, foi convocado para o infantil de um grande clube estadual. Aos 17, já era titular e artilheiro.</p>
-          <p class="bio-text">Duas lesões graves tentaram parar o que não tinha freio. Ele voltou das duas, mais forte, mais preciso. <strong>Hoje, com 680 gols</strong> em 21 anos de carreira, seu nome é sinônimo de determinação e excelência.</p>
-          <div class="bio-milestones">
-            <div class="milestone"><div class="milestone-icon">🌱</div><div class="milestone-info"><strong>Primeira Bola — 1994</strong><span>Campo de várzea no interior do Brasil.</span></div></div>
-            <div class="milestone"><div class="milestone-icon">🏟️</div><div class="milestone-info"><strong>Estreia Profissional — 2003</strong><span>Entrou aos 18 anos e marcou gol no primeiro jogo.</span></div></div>
-            <div class="milestone"><div class="milestone-icon">💥</div><div class="milestone-info"><strong>Retorno Épico — 2009</strong><span>Após ruptura do ligamento, voltou e foi artilheiro.</span></div></div>
-            <div class="milestone"><div class="milestone-icon">🏆</div><div class="milestone-info"><strong>Marco dos 500 Gols — 2018</strong><span>Entrou para o seleto grupo dos 500+ em ligas nacionais.</span></div></div>
-            <div class="milestone"><div class="milestone-icon">⭐</div><div class="milestone-info"><strong>680 Gols — O Legado</strong><span>Uma marca que transcende o futebol.</span></div></div>
-          </div>
+        <div class="card__body">
+          <h3 class="card__name">Jeans Skinny Feminino</h3>
+          <p class="card__brand">Denim</p>
+          <p class="card__price">R$ 189,90</p>
+          <button class="btn btn--cart" onclick="addToCart(this)">Adicionar ao carrinho</button>
         </div>
-      </div>
-      <div class="reveal" style="margin-top:60px;">
-        <div class="section-tag">Trajetória</div>
-        <h3 class="section-title" style="font-size:2.2rem; margin-bottom:40px;">Linha do Tempo</h3>
-        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap:16px;">
-          <div class="glass" style="padding:24px 20px; border-radius:16px;"><div style="font-family:'Bebas Neue',sans-serif; font-size:1.8rem; color:var(--electric);">2003</div><div style="font-weight:700; margin:6px 0 4px; color:var(--white);">Estreia</div><div style="font-size:.82rem; color:var(--muted);">Primeiro gol profissional.</div></div>
-          <div class="glass" style="padding:24px 20px; border-radius:16px;"><div style="font-family:'Bebas Neue',sans-serif; font-size:1.8rem; color:var(--electric);">2006</div><div style="font-weight:700; margin:6px 0 4px; color:var(--white);">1ª Artilharia</div><div style="font-size:.82rem; color:var(--muted);">Top scorer nacional pela primeira vez.</div></div>
-          <div class="glass" style="padding:24px 20px; border-radius:16px;"><div style="font-family:'Bebas Neue',sans-serif; font-size:1.8rem; color:var(--electric);">2009</div><div style="font-weight:700; margin:6px 0 4px; color:var(--white);">Retorno</div><div style="font-size:.82rem; color:var(--muted);">Voltou de lesão e foi campeão.</div></div>
-          <div class="glass" style="padding:24px 20px; border-radius:16px;"><div style="font-family:'Bebas Neue',sans-serif; font-size:1.8rem; color:var(--electric);">2015</div><div style="font-weight:700; margin:6px 0 4px; color:var(--white);">300 Gols</div><div style="font-size:.82rem; color:var(--muted);">Tricentenário lendário.</div></div>
-          <div class="glass" style="padding:24px 20px; border-radius:16px;"><div style="font-family:'Bebas Neue',sans-serif; font-size:1.8rem; color:var(--electric);">2018</div><div style="font-weight:700; margin:6px 0 4px; color:var(--white);">500 Gols</div><div style="font-size:.82rem; color:var(--muted);">Entrou para a história do futebol.</div></div>
-          <div class="glass" style="padding:24px 20px; border-radius:16px; border-color:rgba(26,108,255,.5);"><div style="font-family:'Bebas Neue',sans-serif; font-size:1.8rem; color:var(--gold);">2024</div><div style="font-weight:700; margin:6px 0 4px; color:var(--white);">680 Gols</div><div style="font-size:.82rem; color:var(--muted);">O legado definitivo.</div></div>
+      </article>
+
+      <article class="card" data-id="j2" data-name="Calça Jeans Straight Masculina" data-price="209.90">
+        <div class="card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1604176424472-9d19e26b1f37?w=600&q=80" alt="Jeans Straight" loading="lazy" />
         </div>
-      </div>
+        <div class="card__body">
+          <h3 class="card__name">Jeans Straight Masculino</h3>
+          <p class="card__brand">Denim</p>
+          <p class="card__price">R$ 209,90</p>
+          <button class="btn btn--cart" onclick="addToCart(this)">Adicionar ao carrinho</button>
+        </div>
+      </article>
+
+      <article class="card" data-id="j3" data-name="Short Jeans Feminino" data-price="119.90">
+        <div class="card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1591195853828-11db59a44f43?w=600&q=80" alt="Short Jeans" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__name">Short Jeans Desfiado</h3>
+          <p class="card__brand">Denim</p>
+          <p class="card__price">R$ 119,90</p>
+          <button class="btn btn--cart" onclick="addToCart(this)">Adicionar ao carrinho</button>
+        </div>
+      </article>
+
+      <article class="card" data-id="j4" data-name="Jaqueta Jeans Unissex" data-price="269.90">
+        <div class="card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1611312449408-fcece27cdbb7?w=600&q=80" alt="Jaqueta Jeans" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__name">Jaqueta Jeans Unissex</h3>
+          <p class="card__brand">Denim</p>
+          <p class="card__price">R$ 269,90</p>
+          <button class="btn btn--cart" onclick="addToCart(this)">Adicionar ao carrinho</button>
+        </div>
+      </article>
+
     </div>
   </section>
-</div>
 
-<!-- PAGE: ESTATÍSTICAS -->
-<div id="stats" class="page">
-  <section style="padding:120px 0 100px;">
-    <div class="container">
-      <div class="stats-header reveal">
-        <div class="section-tag">Dashboard</div>
-        <h2 class="section-title">Performance &<br/>Dados do Atleta</h2>
-        <p class="section-subtitle">Números que traduzem décadas de excelência dentro dos gramados.</p>
-      </div>
-      <div class="kpi-grid">
-        <div class="kpi-card reveal"><div class="kpi-icon">⚽</div><div class="kpi-num" data-count="680" data-suffix="">0</div><div class="kpi-label">Gols na Carreira</div></div>
-        <div class="kpi-card reveal" style="transition-delay:.1s"><div class="kpi-icon">🎯</div><div class="kpi-num" data-count="0.74" data-suffix="">0</div><div class="kpi-label">Gols por Jogo</div></div>
-        <div class="kpi-card reveal" style="transition-delay:.2s"><div class="kpi-icon">🏆</div><div class="kpi-num" data-count="12" data-suffix="">0</div><div class="kpi-label">Títulos Oficiais</div></div>
-        <div class="kpi-card reveal" style="transition-delay:.3s"><div class="kpi-icon">📅</div><div class="kpi-num" data-count="918" data-suffix="">0</div><div class="kpi-label">Jogos Disputados</div></div>
-      </div>
-      <div class="charts-grid">
-        <div class="chart-card reveal"><div class="chart-card-title">Gols por Temporada</div><div class="chart-wrap"><canvas id="goalsChart"></canvas></div></div>
-        <div class="chart-card reveal" style="transition-delay:.15s"><div class="chart-card-title">Mapa de Habilidades</div><div class="chart-wrap"><canvas id="skillsChart"></canvas></div></div>
-      </div>
-      <div class="chart-card reveal" style="margin-top:0;">
-        <div class="chart-card-title" style="margin-bottom:32px;">Métricas de Desempenho</div>
-        <div class="skills-grid">
-          <div class="skill-bar-item"><div class="skill-bar-header"><span class="skill-bar-name">⚽ Finalização</span><span class="skill-bar-pct">97%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-pct="97"></div></div></div>
-          <div class="skill-bar-item"><div class="skill-bar-header"><span class="skill-bar-name">💨 Velocidade</span><span class="skill-bar-pct">88%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-pct="88"></div></div></div>
-          <div class="skill-bar-item"><div class="skill-bar-header"><span class="skill-bar-name">🎯 Precisão</span><span class="skill-bar-pct">95%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-pct="95"></div></div></div>
-          <div class="skill-bar-item"><div class="skill-bar-header"><span class="skill-bar-name">🧠 Visão de Jogo</span><span class="skill-bar-pct">85%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-pct="85"></div></div></div>
-          <div class="skill-bar-item"><div class="skill-bar-header"><span class="skill-bar-name">🦶 Drible</span><span class="skill-bar-pct">90%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-pct="90"></div></div></div>
-          <div class="skill-bar-item"><div class="skill-bar-header"><span class="skill-bar-name">💪 Força Física</span><span class="skill-bar-pct">82%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-pct="82"></div></div></div>
+  <!-- ===== BOLSAS ===== -->
+  <section class="section" id="bolsas">
+    <div class="section__header">
+      <span class="section__tag">Acessórios</span>
+      <h2 class="section__title">Bolsas</h2>
+      <p class="section__desc">O acessório certo transforma qualquer look.</p>
+    </div>
+    <div class="products-grid">
+
+      <article class="card" data-id="b1" data-name="Bolsa Tote de Couro" data-price="449.90">
+        <div class="card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&q=80" alt="Bolsa Tote" loading="lazy" />
         </div>
-      </div>
-      <div class="chart-card reveal" style="margin-top:24px;">
-        <div class="chart-card-title" style="margin-bottom:28px;">Palmarés & Conquistas</div>
-        <div style="overflow-x:auto;">
-          <table style="width:100%; border-collapse:collapse; font-size:.9rem;">
-            <thead><tr style="border-bottom:1px solid rgba(255,255,255,0.08);"><th style="text-align:left; padding:12px 16px; color:var(--muted); font-weight:600; letter-spacing:1px; text-transform:uppercase; font-size:.75rem;">Conquista</th><th style="text-align:center; padding:12px 16px; color:var(--muted); font-weight:600; letter-spacing:1px; text-transform:uppercase; font-size:.75rem;">Ano(s)</th><th style="text-align:center; padding:12px 16px; color:var(--muted); font-weight:600; letter-spacing:1px; text-transform:uppercase; font-size:.75rem;">Vezes</th></tr></thead>
-            <tbody>
-              <tr style="border-bottom:1px solid rgba(255,255,255,0.04);" onmouseover="this.style.background='rgba(26,108,255,0.06)'" onmouseout="this.style.background=''"><td style="padding:14px 16px; color:var(--white); font-weight:600;">🏆 Campeonato Nacional</td><td style="padding:14px 16px; text-align:center; color:var(--muted);">2007, 2011, 2014, 2019</td><td style="padding:14px 16px; text-align:center; color:var(--electric); font-weight:700;">4×</td></tr>
-              <tr style="border-bottom:1px solid rgba(255,255,255,0.04);" onmouseover="this.style.background='rgba(26,108,255,0.06)'" onmouseout="this.style.background=''"><td style="padding:14px 16px; color:var(--white); font-weight:600;">🥇 Copa do Brasil</td><td style="padding:14px 16px; text-align:center; color:var(--muted);">2008, 2013, 2020</td><td style="padding:14px 16px; text-align:center; color:var(--electric); font-weight:700;">3×</td></tr>
-              <tr style="border-bottom:1px solid rgba(255,255,255,0.04);" onmouseover="this.style.background='rgba(26,108,255,0.06)'" onmouseout="this.style.background=''"><td style="padding:14px 16px; color:var(--white); font-weight:600;">⭐ Artilheiro do Ano</td><td style="padding:14px 16px; text-align:center; color:var(--muted);">2006, 2009, 2012, 2016, 2019, 2021, 2023</td><td style="padding:14px 16px; text-align:center; color:var(--electric); font-weight:700;">7×</td></tr>
-              <tr style="border-bottom:1px solid rgba(255,255,255,0.04);" onmouseover="this.style.background='rgba(26,108,255,0.06)'" onmouseout="this.style.background=''"><td style="padding:14px 16px; color:var(--white); font-weight:600;">🌟 Melhor Jogador do Torneio</td><td style="padding:14px 16px; text-align:center; color:var(--muted);">2011, 2014, 2019</td><td style="padding:14px 16px; text-align:center; color:var(--electric); font-weight:700;">3×</td></tr>
-              <tr onmouseover="this.style.background='rgba(26,108,255,0.06)'" onmouseout="this.style.background=''"><td style="padding:14px 16px; color:var(--white); font-weight:600;">🏅 Bola de Ouro Nacional</td><td style="padding:14px 16px; text-align:center; color:var(--muted);">2012, 2016, 2021</td><td style="padding:14px 16px; text-align:center; color:var(--gold); font-weight:700;">3×</td></tr>
-            </tbody>
-          </table>
+        <div class="card__body">
+          <h3 class="card__name">Bolsa Tote de Couro</h3>
+          <p class="card__brand">Acessórios</p>
+          <p class="card__price">R$ 449,90</p>
+          <button class="btn btn--cart" onclick="addToCart(this)">Adicionar ao carrinho</button>
         </div>
-      </div>
+      </article>
+
+      <article class="card" data-id="b2" data-name="Clutch Elegante" data-price="229.90">
+        <div class="card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?w=600&q=80" alt="Clutch" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__name">Clutch Elegante Dourada</h3>
+          <p class="card__brand">Acessórios</p>
+          <p class="card__price">R$ 229,90</p>
+          <button class="btn btn--cart" onclick="addToCart(this)">Adicionar ao carrinho</button>
+        </div>
+      </article>
+
+      <article class="card" data-id="b3" data-name="Mochila Feminina Premium" data-price="319.90">
+        <div class="card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&q=80" alt="Mochila" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__name">Mochila Feminina Premium</h3>
+          <p class="card__brand">Acessórios</p>
+          <p class="card__price">R$ 319,90</p>
+          <button class="btn btn--cart" onclick="addToCart(this)">Adicionar ao carrinho</button>
+        </div>
+      </article>
+
+      <article class="card" data-id="b4" data-name="Bolsa Crossbody Minimalista" data-price="289.90">
+        <div class="card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=600&q=80" alt="Crossbody" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__name">Bolsa Crossbody Mini</h3>
+          <p class="card__brand">Acessórios</p>
+          <p class="card__price">R$ 289,90</p>
+          <button class="btn btn--cart" onclick="addToCart(this)">Adicionar ao carrinho</button>
+        </div>
+      </article>
+
     </div>
   </section>
-</div>
 
-<!-- PAGE: GALERIA -->
-<div id="gallery" class="page">
-  <section style="padding:120px 0 100px;">
-    <div class="container">
-      <div class="gallery-header reveal">
-        <div class="section-tag">Galeria</div>
-        <h2 class="section-title">Momentos que<br/>Ficaram na Memória</h2>
-        <p class="section-subtitle">Uma seleção dos instantes mais marcantes de uma carreira extraordinária.</p>
-        <div class="gallery-filters">
-          <button class="filter-btn active" data-filter="all">Todos</button>
-          <button class="filter-btn" data-filter="jogos">Jogos</button>
-          <button class="filter-btn" data-filter="treinos">Treinos</button>
-          <button class="filter-btn" data-filter="titulos">Títulos</button>
+  <!-- ===== LINGERIE ===== -->
+  <section class="section section--alt" id="lingerie">
+    <div class="section__header">
+      <span class="section__tag">Íntimo</span>
+      <h2 class="section__title">Lingerie</h2>
+      <p class="section__desc">Conforto, leveza e sensualidade com muito estilo.</p>
+    </div>
+    <div class="products-grid">
+
+      <article class="card" data-id="l1" data-name="Conjunto Rendado Luxo" data-price="189.90">
+        <div class="card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&q=80" alt="Lingerie Rendada" loading="lazy" />
         </div>
-      </div>
-      <div class="gallery-grid">
-        <div class="gallery-item reveal" data-cat="jogos"><img src="https://images.unsplash.com/photo-1551958219-acbc595d836f?w=800&q=80" alt="Jogo noturno" /><div class="gallery-overlay"><div class="gallery-caption">Final do Campeonato<span>📍 Estádio Nacional · 2019</span></div></div></div>
-        <div class="gallery-item reveal" data-cat="treinos" style="transition-delay:.1s"><img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80" alt="Treino" /><div class="gallery-overlay"><div class="gallery-caption">Treino de Precisão<span>⚽ Centro de Treinamento · 2022</span></div></div></div>
-        <div class="gallery-item reveal" data-cat="titulos" style="transition-delay:.15s"><img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=600&q=80" alt="Título" /><div class="gallery-overlay"><div class="gallery-caption">Taça Levantada!<span>🏆 Copa do Brasil · 2020</span></div></div></div>
-        <div class="gallery-item reveal" data-cat="jogos" style="transition-delay:.2s"><img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=900&q=80" alt="Estádio" /><div class="gallery-overlay"><div class="gallery-caption">Noite de Gala<span>📍 Estádio Lotado · 2021</span></div></div></div>
-        <div class="gallery-item reveal" data-cat="treinos" style="transition-delay:.25s"><img src="https://images.unsplash.com/photo-1587329310686-91414b8e3cb7?w=600&q=80" alt="Chuteiras" /><div class="gallery-overlay"><div class="gallery-caption">Os Instrumentos<span>👟 Equipamentos · 2023</span></div></div></div>
-        <div class="gallery-item reveal" data-cat="titulos" style="transition-delay:.3s"><img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=600&q=80" alt="Bola" /><div class="gallery-overlay"><div class="gallery-caption">A Bola do Gol 500<span>⭐ Marco Histórico · 2018</span></div></div></div>
-      </div>
-      <div class="reveal" style="margin-top:60px; text-align:center;">
-        <div class="glass" style="padding:48px 32px; border-radius:24px; max-width:600px; margin:0 auto;">
-          <div style="font-size:2rem; margin-bottom:16px;">🌟</div>
-          <h3 style="font-family:'Bebas Neue',sans-serif; font-size:2rem; margin-bottom:12px;">Uma Carreira Lendária</h3>
-          <p style="color:var(--muted); font-size:.95rem; line-height:1.7; margin-bottom:28px;">680 gols. 21 anos. Uma história que transcende o futebol e inspira gerações.</p>
-          <button class="btn-primary" data-page="stats">📊 Ver Todas as Estatísticas</button>
+        <div class="card__body">
+          <h3 class="card__name">Conjunto Rendado Luxo</h3>
+          <p class="card__brand">Lingerie</p>
+          <p class="card__price">R$ 189,90</p>
+          <button class="btn btn--cart" onclick="addToCart(this)">Adicionar ao carrinho</button>
         </div>
-      </div>
+      </article>
+
+      <article class="card" data-id="l2" data-name="Sutiã Push-Up Confort" data-price="99.90">
+        <div class="card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1602206023100-52ffa1e64e14?w=600&q=80" alt="Sutiã" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__name">Sutiã Push-Up Confort</h3>
+          <p class="card__brand">Lingerie</p>
+          <p class="card__price">R$ 99,90</p>
+          <button class="btn btn--cart" onclick="addToCart(this)">Adicionar ao carrinho</button>
+        </div>
+      </article>
+
+      <article class="card" data-id="l3" data-name="Body Rendado Premium" data-price="149.90">
+        <div class="card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80" alt="Body" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__name">Body Rendado Premium</h3>
+          <p class="card__brand">Lingerie</p>
+          <p class="card__price">R$ 149,90</p>
+          <button class="btn btn--cart" onclick="addToCart(this)">Adicionar ao carrinho</button>
+        </div>
+      </article>
+
+      <article class="card" data-id="l4" data-name="Camisola Cetim Elegance" data-price="129.90">
+        <div class="card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1609710228159-0fa9bd7e0827?w=600&q=80" alt="Camisola" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__name">Camisola Cetim Elegance</h3>
+          <p class="card__brand">Lingerie</p>
+          <p class="card__price">R$ 129,90</p>
+          <button class="btn btn--cart" onclick="addToCart(this)">Adicionar ao carrinho</button>
+        </div>
+      </article>
+
     </div>
   </section>
-</div>
 
-<!-- FOOTER -->
-<footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="nav-logo">RF <span style="color:var(--electric)">10</span></div>
-        <p class="footer-desc">Site oficial de Robson Ferreira — artilheiro lendário com 680 gols e uma carreira dedicada à excelência no futebol brasileiro.</p>
+  <!-- ===== ROUPAS EM GERAL ===== -->
+  <section class="section" id="geral">
+    <div class="section__header">
+      <span class="section__tag">Coleção</span>
+      <h2 class="section__title">Roupas em Geral</h2>
+      <p class="section__desc">Peças versáteis para compor looks do dia a dia ao especial.</p>
+    </div>
+    <div class="products-grid">
+
+      <article class="card" data-id="g1" data-name="Moletom Unissex Premium" data-price="179.90">
+        <div class="card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=600&q=80" alt="Moletom" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__name">Moletom Unissex Premium</h3>
+          <p class="card__brand">Casual</p>
+          <p class="card__price">R$ 179,90</p>
+          <button class="btn btn--cart" onclick="addToCart(this)">Adicionar ao carrinho</button>
+        </div>
+      </article>
+
+      <article class="card" data-id="g2" data-name="Conjunto de Pijama Satin" data-price="159.90">
+        <div class="card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1555689502-c4b22d76c56f?w=600&q=80" alt="Pijama" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__name">Conjunto Pijama Satin</h3>
+          <p class="card__brand">Casual</p>
+          <p class="card__price">R$ 159,90</p>
+          <button class="btn btn--cart" onclick="addToCart(this)">Adicionar ao carrinho</button>
+        </div>
+      </article>
+
+      <article class="card" data-id="g3" data-name="Legging Fitness Cós Alto" data-price="109.90">
+        <div class="card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=600&q=80" alt="Legging" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__name">Legging Cós Alto Fitness</h3>
+          <p class="card__brand">Casual</p>
+          <p class="card__price">R$ 109,90</p>
+          <button class="btn btn--cart" onclick="addToCart(this)">Adicionar ao carrinho</button>
+        </div>
+      </article>
+
+      <article class="card" data-id="g4" data-name="Camiseta Básica Algodão" data-price="59.90">
+        <div class="card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&q=80" alt="Camiseta" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__name">Camiseta Básica Algodão</h3>
+          <p class="card__brand">Casual</p>
+          <p class="card__price">R$ 59,90</p>
+          <button class="btn btn--cart" onclick="addToCart(this)">Adicionar ao carrinho</button>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo"><span class="logo-v">V</span>elour</span>
+        <p>Moda & Cosméticos com elegância.</p>
       </div>
-      <div class="footer-col">
-        <h4>Navegação</h4>
-        <a href="#" data-page="home">Home</a>
-        <a href="#" data-page="bio">Biografia</a>
-        <a href="#" data-page="stats">Estatísticas</a>
-        <a href="#" data-page="gallery">Galeria</a>
+      <div class="footer__links">
+        <h4>Categorias</h4>
+        <a href="#cosmeticos">Cosméticos</a>
+        <a href="#masculino">Masculino</a>
+        <a href="#feminino">Feminino</a>
+        <a href="#jeans">Jeans</a>
+        <a href="#bolsas">Bolsas</a>
+        <a href="#lingerie">Lingerie</a>
       </div>
-      <div class="footer-col">
-        <h4>Destaques</h4>
-        <a href="#">680 Gols</a>
-        <a href="#">7× Artilheiro</a>
-        <a href="#">12 Títulos</a>
-        <a href="#">21 Anos de Carreira</a>
+      <div class="footer__contact">
+        <h4>Contato</h4>
+        <p>Atendimento via WhatsApp</p>
+        <a href="#" class="btn btn--whatsapp-footer" id="footerWA">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.116 1.527 5.847L.057 23.49a.75.75 0 00.914.914l5.643-1.47A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.705 9.705 0 01-4.95-1.356l-.355-.211-3.675.957.974-3.566-.232-.365A9.705 9.705 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+          Fale conosco
+        </a>
       </div>
     </div>
-    <div class="footer-bottom">
-      <span>© 2024 Robson Ferreira. Todos os direitos reservados.</span>
-      <span style="color:var(--electric); font-weight:600;">⚽ 680 Gols & Contando</span>
+    <div class="footer__bottom">
+      <p>© 2025 Velour. Todos os direitos reservados.</p>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<!-- Lightbox -->
-<div class="lightbox" id="lightbox">
-  <button class="lightbox-close" id="lightboxClose">✕</button>
-  <img class="lightbox-img" id="lightboxImg" src="" alt="Galeria" />
-</div>
+  <!-- ===== CARRINHO LATERAL ===== -->
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer__header">
+      <h2>Seu Carrinho</h2>
+      <button class="cart-drawer__close" id="cartClose" aria-label="Fechar carrinho">✕</button>
+    </div>
+    <div class="cart-drawer__body" id="cartBody">
+      <div class="cart-empty" id="cartEmpty">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+        <p>Seu carrinho está vazio.</p>
+        <span>Adicione produtos para continuar.</span>
+      </div>
+      <ul class="cart-items" id="cartItems"></ul>
+    </div>
+    <div class="cart-drawer__footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <strong id="cartTotal">R$ 0,00</strong>
+      </div>
+      <button class="btn btn--whatsapp" id="checkoutBtn" disabled>
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+          <path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.116 1.527 5.847L.057 23.49a.75.75 0 00.914.914l5.643-1.47A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.705 9.705 0 01-4.95-1.356l-.355-.211-3.675.957.974-3.566-.232-.365A9.705 9.705 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/>
+        </svg>
+        Finalizar Pedido via WhatsApp
+      </button>
+    </div>
+  </aside>
 
-<script src="script.js"></script>
+  <!-- Overlay -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
 </body>
 </html>
