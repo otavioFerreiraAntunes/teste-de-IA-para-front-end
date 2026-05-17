@@ -616,6 +616,9 @@ button { border: none; cursor: pointer; font-family: var(--font-body); }
   min-height: 0;     /* truque essencial: permite que flex-child encolha abaixo do content-size */
   overflow-y: auto;
   overflow-x: hidden;
+  -webkit-overflow-scrolling: touch; /* scroll suave no iOS Safari */
+  overscroll-behavior: contain;      /* impede que o scroll vaze para o body */
+  touch-action: pan-y;               /* permite scroll vertical no touch, bloqueia o resto */
   padding: 16px 0;
   /* Scrollbar estilizada igual ao resto do site */
   scrollbar-width: thin;
