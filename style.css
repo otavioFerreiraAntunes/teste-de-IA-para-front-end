@@ -562,10 +562,12 @@ button { border: none; cursor: pointer; font-family: var(--font-body); }
   width: 400px;
   max-width: 100vw;
   height: 100vh;
+  max-height: 100vh;
   background: var(--white);
   z-index: 1100;
   display: flex;
   flex-direction: column;
+  overflow: hidden; /* impede que o drawer inteiro role */
   transform: translateX(100%);
   transition: transform .38s cubic-bezier(.32,.72,0,1);
   box-shadow: -8px 0 48px rgba(45,10,78,.15);
@@ -576,6 +578,7 @@ button { border: none; cursor: pointer; font-family: var(--font-body); }
 }
 
 .cart-drawer__header {
+  flex-shrink: 0;    /* cabeçalho fixo, nunca encolhe */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -609,10 +612,18 @@ button { border: none; cursor: pointer; font-family: var(--font-body); }
 }
 
 .cart-drawer__body {
-  flex: 1;
+  flex: 1 1 0;       /* cresce mas nunca ultrapassa o espaço disponível */
+  min-height: 0;     /* truque essencial: permite que flex-child encolha abaixo do content-size */
   overflow-y: auto;
+  overflow-x: hidden;
   padding: 16px 0;
+  /* Scrollbar estilizada igual ao resto do site */
+  scrollbar-width: thin;
+  scrollbar-color: var(--purple-light) var(--purple-ghost);
 }
+.cart-drawer__body::-webkit-scrollbar { width: 5px; }
+.cart-drawer__body::-webkit-scrollbar-track { background: var(--purple-ghost); }
+.cart-drawer__body::-webkit-scrollbar-thumb { background: var(--purple-light); border-radius: 3px; }
 
 /* Empty state */
 .cart-empty {
@@ -730,6 +741,7 @@ button { border: none; cursor: pointer; font-family: var(--font-body); }
 }
 
 .cart-drawer__footer {
+  flex-shrink: 0;    /* nunca encolhe — sempre visível no rodapé */
   padding: 20px 24px 28px;
   border-top: 1px solid var(--purple-pale);
   background: var(--purple-ghost);
